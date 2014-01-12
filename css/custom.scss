@@ -122,6 +122,7 @@ body {
     .badge {
       color: #000000;
     }
+
     .to-do {
       .well {
         margin-bottom: 10px;
@@ -141,6 +142,7 @@ body {
         }
       }
     }
+
     .data-table {
       .well {
         padding-left: 0;
@@ -164,6 +166,27 @@ body {
         padding-left: 10%;
       }
     }
+
+    .new-enq-reg {
+      .progress {
+        margin-top: 7px;
+      }
+      .btn-next {
+        margin-right: 15px;
+      }
+      .form-added {
+        background-color: #FFFFFF;
+        margin-left: -19px;
+        margin-right: -19px;
+        padding: 19px;
+        border-top: 1px solid #E8E8E8;
+        border-bottom: 1px solid #E8E8E8;
+      }
+      .glyphicon-remove {
+        margin-right: 0;
+      }
+    }
+
     .form-control.hor-first {
       margin: 0;
     }

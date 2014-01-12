@@ -110,6 +110,19 @@ body {
     cursor: pointer; }
   .main .main-content .data-table .filter-center {
     padding-left: 10%; }
+  .main .main-content .new-enq-reg .progress {
+    margin-top: 7px; }
+  .main .main-content .new-enq-reg .btn-next {
+    margin-right: 15px; }
+  .main .main-content .new-enq-reg .form-added {
+    background-color: #FFFFFF;
+    margin-left: -19px;
+    margin-right: -19px;
+    padding: 19px;
+    border-top: 1px solid #E8E8E8;
+    border-bottom: 1px solid #E8E8E8; }
+  .main .main-content .new-enq-reg .glyphicon-remove {
+    margin-right: 0; }
   .main .main-content .form-control.hor-first {
     margin: 0; }
   .main .main-content .theme-color {
