@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Organizor</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/dt-bootstrap.css">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div id="header">
+      <div class="container">
+          <div class="col-md-9">
+            <h1 class="text-left">Organizor</h1>
+          </div>
+          <div class="col-md-3 profile pull-right">
+            <div class="col-md-3">
+              <img src="images/profile.jpg" height="50" width="50" alt="profile" class="img-rounded">
+            </div>
+            <div class="col-md-9">
+              <small>Jonathan Bhaskar</small>
+              <small class="block">Logout</small>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Wrap all page content here -->
+    <div id="wrap" class="container">
+
+      <!-- Begin page content -->
+      <div class="container main">
+        <div class="row">
+          <div class="col-md-2 left-nav">
+            <ul class="nav nav-pills nav-stacked">
+              <li class="disabled"><a href="#"><span class="glyphicon glyphicon-th"></span>Dashboard</a></li>
+              <li class="active"><a href="#"><span class="glyphicon glyphicon-earphone"></span>Enquiries</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-pencil"></span>Registration</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-book"></span>Accounts</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-euro"></span>Contracts</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-envelope"></span>Emails</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-calendar"></span>Calender</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-stats"></span>Reports</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-check"></span>Todos</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-wrench"></span>Settings</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span>Users</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-list"></span>Configuration</a></li>
+            </ul>
+          </div>
+          <div class="col-md-10 col-md-offset-2 main-content">
+            <div class="row row-top">
+              <div class="col-md-10">
+                <h3>Enquiries</h3>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group form-last pull-right">
+                  <button type="submit" class="btn btn-primary">New Enquiry</button>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <ul class="nav nav-pills seperator">
+                  <li class="active"><a href="#">All</a></li>
+                  <li><a href="#">Pending</a></li>
+                  <li><a href="#">Following</a></li>
+                  <li><a href="#">Deactivated</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 data-table">
+            <div class="well">
+
+            <div class="row row-top">
+              <div class="col-md-2">
+                <select class="form-control hor-first">
+                  <option>-Mass Actions-</option>
+                  <option>Assign to</option>
+                  <option>Bulk email</option>
+                  <option>Deactivate</option>
+                </select>
+              </div>
+              <div class="col-md-7 text-center filter-center">
+                <form class="form-inline" role="form">
+                  <div class="form-group">
+                    <label for="id_column">Filter by</label>
+                    <select class="form-control" id="id_column">
+                      <option>-column name-</option>
+                      <option>Assign to</option>
+                      <option>Bulk email</option>
+                      <option>Deactivate</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="id_search">containing</label>
+                    <input type="text" class="form-control inline-control" id="id_search" placeholder="search term">
+                  </div>
+                  <span class="glyphicon glyphicon-remove"></span>
+                </form>
+              </div>
+              <div class="col-md-3">
+                <form class="form-inline" role="form">
+                  <div class="form-group pull-right">
+                    <label for="id_column">Follow up</label>
+                    <select class="form-control" id="id_column">
+                      <option>All time</option>
+                      <option>Today</option>
+                      <option>Tomorrow</option>
+                      <option>None</option>
+                    </select>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <table cellpadding="0" cellspacing="0" border="0" class="table table-hover" id="example">
+              <thead>
+                <tr>
+                  <th><input type="checkbox"></th>
+                  <th>First Name</th>
+                  <th>Mobile1</th>
+                  <th>Email1</th>
+                  <th>Gender</th>
+                  <th>Date of Birth</th>
+                  <th>Assigned to</th>
+                  <th>Contact Type</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input type="checkbox"><span class="badge badge-red label-right">3</span></td>
+                  <td>Thamizh</td>
+                  <td>9877665456</td>
+                  <td>weqr@weqr.com</td>
+                  <td>M</td>
+                  <td>2013-11-10</td>
+                  <td>faizal</td>
+                  <td>Walk-in</td>
+                  <td class="text-center"><span class="glyphicon glyphicon-edit"></span><span class="glyphicon glyphicon-trash"></span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"><span class="badge badge-green label-right">7</span></td>
+                  <td>Selva</td>
+                  <td>98776456</td>
+                  <td>dsdfcd@abc.com</td>
+                  <td>M</td>
+                  <td>2013-10-09</td>
+                  <td>senthil</td>
+                  <td>Telephone</td>
+                  <td class="text-center"><span class="glyphicon glyphicon-edit"></span><span class="glyphicon glyphicon-trash"></span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"><span class="badge badge-yellow label-right">5</span></td>
+                  <td>Arthi</td>
+                  <td>9845365456</td>
+                  <td>abc@onuus.com</td>
+                  <td>F</td>
+                  <td>2012-12-09</td>
+                  <td>senthil</td>
+                  <td>Telephone</td>
+                  <td class="text-center"><span class="glyphicon glyphicon-edit"></span><span class="glyphicon glyphicon-trash"></span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"><span class="badge badge-red label-right">3</span></td>
+                  <td>Senthil</td>
+                  <td>45457665456</td>
+                  <td>sineki@rasbu.com</td>
+                  <td>M</td>
+                  <td>2011-10-17</td>
+                  <td>senthil</td>
+                  <td>Telephone</td>
+                  <td class="text-center"><span class="glyphicon glyphicon-edit"></span><span class="glyphicon glyphicon-trash"></span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"><span class="badge badge-green label-right">8</span></td>
+                  <td>Naresh</td>
+                  <td>987675456</td>
+                  <td>noname@gmail.com</td>
+                  <td>F</td>
+                  <td>2013-08-19</td>
+                  <td>beck</td>
+                  <td>Telephone</td>
+                  <td class="text-center"><span class="glyphicon glyphicon-edit"></span><span class="glyphicon glyphicon-trash"></span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"><span class="badge badge-red label-right">2</span></td>
+                  <td>Raja</td>
+                  <td>9877665654</td>
+                  <td>yesname@gmail.com</td>
+                  <td>F</td>
+                  <td>2013-04-15</td>
+                  <td>beck</td>
+                  <td>Email</td>
+                  <td class="text-center"><span class="glyphicon glyphicon-edit"></span><span class="glyphicon glyphicon-trash"></span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"><span class="badge badge-red label-right">1</span></td>
+                  <td>Mothi</td>
+                  <td>98776623445</td>
+                  <td>nan@nin.com</td>
+                  <td>F</td>
+                  <td>2013-01-25</td>
+                  <td>beck</td>
+                  <td>Email</td>
+                  <td class="text-center"><span class="glyphicon glyphicon-edit"></span><span class="glyphicon glyphicon-trash"></span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"><span class="badge badge-yellow label-right">5</span></td>
+                  <td>Kumar</td>
+                  <td>98723456545</td>
+                  <td>phantom@lan.com</td>
+                  <td>M</td>
+                  <td>2013-07-27</td>
+                  <td>jona</td>
+                  <td>Email</td>
+                  <td class="text-center"><span class="glyphicon glyphicon-edit"></span><span class="glyphicon glyphicon-trash"></span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"><span class="badge badge-green label-right">8</span></td>
+                  <td>Prem</td>
+                  <td>98784398545</td>
+                  <td>lance@some.com</td>
+                  <td>M</td>
+                  <td>2013-06-29</td>
+                  <td>jona</td>
+                  <td>Email</td>
+                  <td class="text-center"><span class="glyphicon glyphicon-edit"></span><span class="glyphicon glyphicon-trash"></span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"><span class="badge badge-green label-right">9</span></td>
+                  <td>Santosh</td>
+                  <td>98723464543</td>
+                  <td>myname@yahoo.com</td>
+                  <td>M</td>
+                  <td>2013-04-30</td>
+                  <td>jona</td>
+                  <td>Email</td>
+                  <td class="text-center"><span class="glyphicon glyphicon-edit"></span><span class="glyphicon glyphicon-trash"></span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"><span class="badge badge-red label-right">3</span></td>
+                  <td>Ronnie</td>
+                  <td>89876557678</td>
+                  <td>is@yahoo.com</td>
+                  <td>F</td>
+                  <td>2013-02-09</td>
+                  <td>faizal</td>
+                  <td>Email</td>
+                  <td class="text-center"><span class="glyphicon glyphicon-edit"></span><span class="glyphicon glyphicon-trash"></span></td>
+                </tr>
+                <tr>
+                  <td><input type="checkbox"><span class="badge badge-yellow label-right">4</span></td>
+                  <td>Sathya</td>
+                  <td>74594329243</td>
+                  <td>shi@unknown.com</td>
+                  <td>F</td>
+                  <td>2013-12-24</td>
+                  <td>faizal</td>
+                  <td>Walk-in</td>
+                  <td class="text-center"><span class="glyphicon glyphicon-edit"></span><span class="glyphicon glyphicon-trash"></span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-right"><small><em>Organizor © 2013</em></small></p>
+      </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dt-bootstrap.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('#example').dataTable({
+          "aoColumnDefs": [{ 'bSortable': false, 'aTargets': [ 0, -1 ] }]
+        });
+        $('.length-element').html('<form class="form-inline" role="form">' +
+                                    '<div class="form-group">' +
+                                      '<select class="form-control hor-first" id="id_column">' +
+                                        '<option>10</option>' +
+                                        '<option>20</option>' +
+                                        '<option>30</option>' +
+                                        '<option>40</option>' +
+                                      '</select>'+
+                                      '<label for="id_column" class="label-right">rows per page</label>' +
+                                    '</div>')
+      });
+    </script>
+  </body>
+</html>

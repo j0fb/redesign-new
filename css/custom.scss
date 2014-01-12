@@ -1,0 +1,206 @@
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
+
+$primary: #004156;
+
+@mixin border($side) {
+  border-#{$side}: 1px solid #dddddd;
+}
+
+html,
+body {
+  height: 100%;
+  /* The html and body elements cannot have any padding or margin. */
+}
+
+.block {
+  display: block;
+}
+
+.form-last {
+  margin-bottom: 0;
+}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  position: relative;
+  min-height: 100%;
+  margin-top: -70px;
+  margin-bottom: -50px;
+  &:after {
+    content: "";
+    display: block;
+    height: 70px;
+  }
+  &:before {
+    content: "";
+    display: block;
+    height: 70px;
+  }
+}
+
+/* Set the fixed height of the footer here */
+#footer {
+  height: 50px;
+  background-color: #A9DEF0;
+  p {
+    margin-top:1.3rem;
+  }
+}
+
+#header {
+  height: 70px;
+  background-color: $primary;
+  color: #FFFFFF;
+  h1 {
+    font-family: "Yanone Kaffeesatz", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    margin: 1.3rem 0;
+  }
+  .profile {
+    padding-top: 1rem;
+  }
+}
+
+.main {
+  .left-nav {
+    position: absolute;
+    top: 70px;
+    bottom: 50px;
+    z-index: -1;
+    padding-top: 2rem;
+    padding-right: 0;
+    @include border(right);
+    li.active {
+      a, a:hover, a:focus {
+        background-color: $primary;
+      }
+    }
+    a {
+      color: $primary;
+    }
+  }
+  .main-content {
+    padding-top: 2rem;
+    h3 {
+    margin-top: 0;
+    }
+    .row {
+      margin-left: 0;
+      margin-top: 2rem;
+    }
+    .row-top {
+      margin-top: 0;
+    }
+    .row-right {
+      margin-right: 0;
+    }
+    .form-heading {
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    .inline-control {
+      width: 150px;
+    }
+    .label-right {
+      margin-left: 1rem;
+    }
+    .row-first {
+      margin-top: 4rem;
+    }
+    .seperator {
+      border-bottom: 1px solid #DDDDDD;
+    }
+    .badge-green {
+      background-color: lightgreen;
+    }
+    .badge-red {
+      background-color: orangered;
+    }
+    .badge-yellow {
+      background-color: yellow;
+    }
+    .badge {
+      color: #000000;
+    }
+    .to-do {
+      .well {
+        margin-bottom: 10px;
+      }
+      .overdue {
+        .todo-date {
+          color: red;
+        }
+        .well {
+         border: 1px solid red;
+        }
+      }
+      .complete {
+        color: #aaaaaa;
+        .todo-text {
+          text-decoration: line-through;
+        }
+      }
+    }
+    .data-table {
+      .well {
+        padding-left: 0;
+      }
+      .form-control {
+        height: 25px;
+        padding: 2px;
+        margin: 0 5px;
+      }
+      .row {
+        margin-top: 1rem;
+      }
+      .vert-center {
+        margin-top: 5px;
+      }
+      .glyphicon-remove {
+        top: 3px;
+        cursor: pointer;
+      }
+      .filter-center {
+        padding-left: 10%;
+      }
+    }
+    .form-control.hor-first {
+      margin: 0;
+    }
+    .theme-color {
+      margin-left: 0;
+      @mixin mixin-theme-color($color) {
+        margin-right: 30px;
+        width: 90px;
+        height: 90px;
+        background-color: $color;
+      }
+      .brown {
+        @include mixin-theme-color(#743B00);
+      }
+      .dark-blue {
+        @include mixin-theme-color(#004156);
+      }
+      .blue {
+        @include mixin-theme-color(#1D005A);
+      }
+      .wine {
+        @include mixin-theme-color(#67002D);
+      }
+      .green {
+        @include mixin-theme-color(#3F6D00);
+      }
+      .active {
+        border: 7px solid #999999;
+      }
+    }
+  }
+}
+
+.glyphicon {
+  margin-right: 1rem;
+}
+
+.light {
+  color: #777777;
+}
