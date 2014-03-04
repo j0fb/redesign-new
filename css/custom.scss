@@ -31,6 +31,54 @@ body {
 .first {
   padding-left: 0;
 }
+.mt-15 {
+  margin-top: 15px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.ml-10 {
+  margin-left: 10px;
+}
+.pt-10 {
+  padding-top: 10px;
+}
+.pb-10 {
+  padding-bottom: 10px;
+}
+.pl-0 {
+  padding-left: 0;
+}
+.pr-0 {
+  padding-right: 0;
+}
+.pb-15 {
+  padding-bottom: 15px;
+}
+.pointer {
+  cursor: pointer;
+}
+.no-link, .no-link:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.seperator {
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.popover {
+  background-color: #FFFFFF;
+  color: #222222;
+  border: 1px solid #BBBBBB;
+  max-width: 350px;
+  max-height: 500px;
+  overflow: auto;
+  .notification-content {
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
 
 /* Set the fixed height of the footer here */
 #footer {
@@ -55,6 +103,20 @@ body {
   }
   .profile {
     padding-top: 1rem;
+  }
+  .notification-icon {
+    font-size: 1.5em;
+    padding-top: 20px;
+  }
+  .badge {
+    margin-bottom: 15px;
+    vertical-align: middle;
+    padding: 3px 5px;
+    background-color: #F17F6A;
+    color: #000000;
+  }
+  .glyphicon-bell {
+    margin-right: .5rem;
   }
 }
 
@@ -112,9 +174,6 @@ body {
     .row-first {
       margin-top: 4rem;
     }
-    .seperator {
-      border-bottom: 1px solid #DDDDDD;
-    }
     .badge-green {
       background-color: lightgreen;
     }
@@ -126,27 +185,6 @@ body {
     }
     .badge {
       color: #000000;
-    }
-    .pb-15 {
-      padding-bottom: 15px;
-    }
-    .mt-15 {
-      margin-top: 15px;
-    }
-    .mr-10 {
-      margin-right: 10px;
-    }
-    .ml-10 {
-      margin-left: 10px;
-    }
-    .pl-0 {
-      padding-left: 0;
-    }
-    .pr-0 {
-      padding-right: 0;
-    }
-    .pointer {
-      cursor: pointer;
     }
     .filter-well {
       background-color: #FFE9B4;
