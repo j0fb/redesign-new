@@ -1,0 +1,318 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/images/icons/reportm.png">
+
+    <title>Organizor</title>
+    <link href="css/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css/custom.css" media="all" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <!-- Shortening variable -->
+    <div id="header">
+      <div class="container">
+          <div class="col-xs-9">
+            <h1 class="text-left">Organizor</h1>
+          </div>
+          <div class="col-xs-3 profile">
+            <div class="col-xs-3">
+              <img alt="User" class="img-rounded" height="50" src="/images/icons/user.png" width="50" />
+            </div>
+            <div class="col-xs-9">
+              <small>Senthil</small>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Begin page content -->
+    <div class="container main">
+
+      <div class="row">
+        <div class="col-xs-2 left-nav">
+          <ul class="nav nav-pills nav-stacked main-menu">
+
+            <li class="disabled">
+              <a href="#"><span class="glyphicon glyphicon-th"></span>Dashboard</a>
+            </li>
+
+            <li class="disabled">
+              <a href="#"><span class="glyphicon glyphicon-stats"></span>Reports</a>
+            </li>
+
+            <hr>
+
+            <li id="enquiries">
+              <a href="/enquiries"><span class="glyphicon glyphicon-earphone"></span>Enquiries</a>
+            </li>
+            <li id="registrations">
+              <a href="/registrations"><span class="glyphicon glyphicon-pencil"></span>Registrations</a>
+            </li>
+
+            <li id="institutions">
+              <a href="/institutions"><span class="glyphicon glyphicon-home"></span>Institutions</a>
+            </li>
+
+            <li id="people">
+              <a href="/people"><span class="glyphicon glyphicon-folder-open"></span>People</a>
+            </li>
+
+            <hr>
+
+            <!-- not displaying accounts and contracts -->
+
+            <li id="emails">
+                <a href="/emails"><span class="glyphicon glyphicon-envelope"></span>Emails</a>
+            </li>
+
+            <li id="follow_ups">
+              <a href="/follow_ups"><span class="glyphicon glyphicon-calendar"></span>Calendar</a>
+            </li>
+
+            <li id="todos">
+              <a href="/todos"><span class="glyphicon glyphicon-check"></span>Todos</a>
+            </li>
+
+            <hr>
+
+            <li id="settings"><a href="/user_configs"><span class="glyphicon glyphicon-wrench"></span>Settings</a></li>
+            <li id="users">
+                  <a href="/users"><span class="glyphicon glyphicon-user"></span>Users</a>
+            </li>
+            <li id="configuration" class="active">
+                <a href="/configuration"><span class="glyphicon glyphicon-list"></span>Configuration</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-10 main-content">
+                <!-- Enquiry show page -->
+                <div class="row row-top">
+                    <div class="col-xs-9">
+                        <h3>Ram Kumar Muthamizhan</h3>
+                    </div>
+
+                    <div class="col-xs-3 text-right">
+                        <div class="form-group">
+                            <a href="/registrations/4/edit" class="btn btn-primary">Edit</a>
+                            <a href="/registrations/4/clone" class="btn btn-primary">Clone</a>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <ul class="nav nav-pills seperator">
+                                <li id="basic" class="active">
+                                    <a href="/registrations/4">Basic</a>
+                                </li>
+                                <!-- actions the tabs -->
+
+
+                                <li class="dropdown actions">
+                                    <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Actions<b class="caret"></b></a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                                        <li id='email'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;email&#x27;,
+                                               &#x27;4&#x27;);" tabindex="-1">Email</a>
+                                        </li>
+                                        <li id='follow_up'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;follow_up&#x27;,
+                                               &#x27;4&#x27;);" tabindex="-1">Follow Up</a>
+                                        </li>
+                                        <li id='note'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;note&#x27;,
+                                               &#x27;4&#x27;);" tabindex="-1">Note</a>
+                                        </li>
+                                        <li id='todo'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;todo&#x27;,
+                                               &#x27;4&#x27;);" tabindex="-1">Todo</a>
+                                        </li>
+                                        <li id='assign_to'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;assign_to&#x27;,
+                                               &#x27;4&#x27;);" tabindex="-1">Assign To</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li id='application'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;application&#x27;,
+                                               &#x27;4&#x27;);">Application</a>
+                                </li>
+                                <li id='document'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;document&#x27;,
+                                               &#x27;4&#x27;);">Document</a>
+                                </li>
+                                <li id='finance'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;finance&#x27;,
+                                               &#x27;4&#x27;);">Finance</a>
+                                </li>
+                                <li id='timeline'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;timeline&#x27;,
+                                               &#x27;4&#x27;);">Timeline</a>
+                                </li>
+
+
+                                <br/>
+                                <br/>
+
+
+                            </ul>
+                            <!-- some html5 data to be sent to the back end -->
+                            <div id="registration_id_div" data-registration_id='4' data-model_sing='registration' data-model_plu='registrations'></div>
+
+                            <div id="edit-resource-container"></div>
+                            <div id="action_div" class="basic">
+                                <!-- basic information about the registration -->
+                                <div class="row border-b">
+                                    <div class="col-xs-8">
+                                        <div class="row row-top">
+                                            <p><strong>Application Status(es):</strong></p>
+                                            <ul class="no-ul">
+                                                <li><div class="col-xs-4 text-right first"><span class="light"><strong>College name 1</strong></span></div><div class="col-xs-8 first">Status</div></li>
+                                                <li><div class="col-xs-4 text-right first"><span class="light"><strong>College name 2</strong></span></div><div class="col-xs-8 first">Status</div></li>
+                                                <li><div class="col-xs-4 text-right first"><span class="light"><strong>College name 3</strong></span></div><div class="col-xs-8 first">Status</div></li>
+                                            </ul>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xs-5 first">
+                                                <img src="images/profile.jpg" alt="hi" width=200px>
+                                            </div>
+                                            <div class="col-xs-7 first">
+                                                <p><strong>Mobile numbers</strong></p>
+                                                <p>9876543210, 1234567890</p>
+                                                <p><strong>Emails</strong></p>
+                                                <p>jonathan@gmail.com, something@something.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4">
+                                        <div class="well well-sm filter-well form-last">
+                                            <h4>History</h4>
+                                            <p><strong>Registered on </strong>06-10-2013</p>
+                                            <p><strong>Registration Source </strong>Unknown</p>
+                                            <p><strong>Created: </strong></p>
+                                            <p><strong>By </strong>Senthil</p>
+                                            <p><strong>At </strong>06-10-2013 13:37 PM</p>
+                                            <p><strong>Last modified: </strong></p>
+                                            <p><strong>By </strong>Senthil</p>
+                                            <p><strong>At </strong>02-02-2014 16:11 PM</p>
+                                            <p><strong>Currently Assigned: </strong></p>
+                                            <p><strong>To </strong>Senthil</p>
+                                            <p><strong>By </strong>Senthil</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-6">
+                                        <h4><strong>Personal information</strong></h4>
+                                        <ul class="no-ul">
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Date of Birth</strong></span></div><div class="col-xs-8 first">05-08-2013</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Gender</strong></span></div><div class="col-xs-8 first">Male</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Nationality</strong></span></div><div class="col-xs-8 first">Venezuela</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Home Phone</strong></span></div><div class="col-xs-8 first">0444324543</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Work Phone</strong></span></div><div class="col-xs-8 first">0443425435</div></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <h4><strong>Home Address</strong></h4>
+                                        <ul class="no-ul">
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Line 1</strong></span></div><div class="col-xs-8 first">f4, Mahalakshmi apts</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Line 2</strong></span></div><div class="col-xs-8 first">Vijayaganagar 8th main road</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>City</strong></span></div><div class="col-xs-8 first">Chennai</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Country</strong></span></div><div class="col-xs-8 first">Venezuela</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Post Code</strong></span></div><div class="col-xs-8 first">600042</div></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row border-b pb-15">
+                                    <div class="col-xs-6">
+                                        <h4><strong>Passport & Visa</strong></h4>
+                                        <ul class="no-ul">
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Passport No.</strong></span></div><div class="col-xs-8 first">349857345</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Passport Till</strong></span></div><div class="col-xs-8 first">24-10-2013</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Visa Type</strong></span></div><div class="col-xs-8 first">United</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Visa Valid Till</strong></span></div><div class="col-xs-8 first">30-10-2013</div></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <h4><strong>Emergency Contact</strong></h4>
+                                        <ul class="no-ul">
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Full Name</strong></span></div><div class="col-xs-8 first">Senthil</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Relationship</strong></span></div><div class="col-xs-8 first">Brother</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Mobile No.</strong></span></div><div class="col-xs-8 first">23453543</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Email</strong></span></div><div class="col-xs-8 first">sdfasdfg</div></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row border-b pb-15">
+                                    <div class="col-xs-6">
+                                        <h4><strong>Education Background</strong></h4>
+                                        <ul class="no-ul">
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Qualification</strong></span></div><div class="col-xs-8 first">BSC</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Subject</strong></span></div><div class="col-xs-8 first">sdaf</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Institution</strong></span></div><div class="col-xs-8 first">sadf</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Grade</strong></span></div><div class="col-xs-8 first">gfdg</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Exam</strong></span></div><div class="col-xs-8 first">sadf</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Source</strong></span></div><div class="col-xs-8 first">sadf</div></li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-xs-6">
+                                        <h4><strong>English Language Proficiency</strong></h4>
+                                        <ul class="no-ul">
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Level</strong></span></div><div class="col-xs-8 first">Tomato</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Exam Type</strong></span></div><div class="col-xs-8 first">TOEFL</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Exam Score</strong></span></div><div class="col-xs-8 first">231</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Exam Type</strong></span></div><div class="col-xs-8 first">11-10-2013</div></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row border-b pb-15">
+                                    <div class="col-xs-6">
+                                        <h4><strong>Flight Details</strong></h4>
+                                        <ul class="no-ul">
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Flight Number</strong></span></div><div class="col-xs-8 first">23143241</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Arrival Date</strong></span></div><div class="col-xs-8 first">some</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Arrival Time</strong></span></div><div class="col-xs-8 first">time</div></li>
+                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Airport</strong></span></div><div class="col-xs-8 first">sadgadrg</div></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <script>
+                    actmm('registrations');
+                    </script>
+
+                </div>
+            </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-right"><small><em>Organizor © 2013</em></small></p>
+      </div>
+    </div>
+    <script src="js/jquery-1.10.2.min.js"></script>
+  </body>
+</html>
+

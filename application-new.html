@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/images/icons/reportm.png">
+
+    <title>Organizor</title>
+    <link href="css/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css/custom.css" media="all" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <!-- Shortening variable -->
+    <div id="header">
+      <div class="container">
+          <div class="col-xs-9">
+            <h1 class="text-left">Organizor</h1>
+          </div>
+          <div class="col-xs-3 profile">
+            <div class="col-xs-3">
+              <img alt="User" class="img-rounded" height="50" src="/images/icons/user.png" width="50" />
+            </div>
+            <div class="col-xs-9">
+              <small>Senthil</small>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Begin page content -->
+    <div class="container main">
+
+      <div class="row">
+        <div class="col-xs-2 left-nav">
+          <ul class="nav nav-pills nav-stacked main-menu">
+
+            <li class="disabled">
+              <a href="#"><span class="glyphicon glyphicon-th"></span>Dashboard</a>
+            </li>
+
+            <li class="disabled">
+              <a href="#"><span class="glyphicon glyphicon-stats"></span>Reports</a>
+            </li>
+
+            <hr>
+
+            <li id="enquiries">
+              <a href="/enquiries"><span class="glyphicon glyphicon-earphone"></span>Enquiries</a>
+            </li>
+            <li id="registrations">
+              <a href="/registrations"><span class="glyphicon glyphicon-pencil"></span>Registrations</a>
+            </li>
+
+            <li id="institutions">
+              <a href="/institutions"><span class="glyphicon glyphicon-home"></span>Institutions</a>
+            </li>
+
+            <li id="people">
+              <a href="/people"><span class="glyphicon glyphicon-folder-open"></span>People</a>
+            </li>
+
+            <hr>
+
+            <!-- not displaying accounts and contracts -->
+
+            <li id="emails">
+                <a href="/emails"><span class="glyphicon glyphicon-envelope"></span>Emails</a>
+            </li>
+
+            <li id="follow_ups">
+              <a href="/follow_ups"><span class="glyphicon glyphicon-calendar"></span>Calendar</a>
+            </li>
+
+            <li id="todos">
+              <a href="/todos"><span class="glyphicon glyphicon-check"></span>Todos</a>
+            </li>
+
+            <hr>
+
+            <li id="settings"><a href="/user_configs"><span class="glyphicon glyphicon-wrench"></span>Settings</a></li>
+            <li id="users">
+                  <a href="/users"><span class="glyphicon glyphicon-user"></span>Users</a>
+            </li>
+            <li id="configuration" class="active">
+                <a href="/configuration"><span class="glyphicon glyphicon-list"></span>Configuration</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-10 main-content">
+                <!-- Enquiry show page -->
+                <div class="row row-top">
+                    <div class="col-xs-9">
+                        <h3>Ram Kumar Muthamizhan</h3>
+                    </div>
+
+                    <div class="col-xs-3 text-right">
+                        <div class="form-group">
+                            <a href="/registrations/4/edit" class="btn btn-primary">Edit</a>
+                            <a href="/registrations/4/clone" class="btn btn-primary">Clone</a>
+                        </div>
+                    </div>
+
+
+                    <div class="row row-right">
+                        <div class="col-xs-12">
+                            <ul class="nav nav-pills seperator">
+                                <li id="basic">
+                                    <a href="/registrations/4">Basic</a>
+                                </li>
+                                <!-- actions the tabs -->
+
+
+                                <li class="dropdown actions">
+                                    <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Actions<b class="caret"></b></a>
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                                        <li id='email'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;email&#x27;,
+                                               &#x27;4&#x27;);" tabindex="-1">Email</a>
+                                        </li>
+                                        <li id='follow_up'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;follow_up&#x27;,
+                                               &#x27;4&#x27;);" tabindex="-1">Follow Up</a>
+                                        </li>
+                                        <li id='note'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;note&#x27;,
+                                               &#x27;4&#x27;);" tabindex="-1">Note</a>
+                                        </li>
+                                        <li id='todo'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;todo&#x27;,
+                                               &#x27;4&#x27;);" tabindex="-1">Todo</a>
+                                        </li>
+                                        <li id='assign_to'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;assign_to&#x27;,
+                                               &#x27;4&#x27;);" tabindex="-1">Assign To</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li id='application' class="active"><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;application&#x27;,
+                                               &#x27;4&#x27;);">Application</a>
+                                </li>
+                                <li id='document'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;document&#x27;,
+                                               &#x27;4&#x27;);">Document</a>
+                                </li>
+                                <li id='finance'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;finance&#x27;,
+                                               &#x27;4&#x27;);">Finance</a>
+                                </li>
+                                <li id='timeline'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;timeline&#x27;,
+                                               &#x27;4&#x27;);">Timeline</a>
+                                </li>
+
+
+                                <br/>
+                                <br/>
+
+
+                            </ul>
+                            <!-- some html5 data to be sent to the back end -->
+                            <div id="registration_id_div" data-registration_id='4' data-model_sing='registration' data-model_plu='registrations'></div>
+
+                            <div id="edit-resource-container"></div>
+                            <div id="action_div" class="application">
+                                <div class="row row-right">
+                                    <h4><strong>Country 1</strong></h4>
+                                    <div class="panel-group" id="accordion">
+                                      <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                          <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                              INTO Manchester [Joined]
+                                            </a>
+                                          </h4>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse in">
+                                          <div class="panel-body">
+                                            <div class="row row-top row-right border-b">
+                                                <div class="col-xs-8 pl-0">
+                                                    <div class="row row-top">
+                                                        <h4><span class="light mr-10">Status:</span>Joined<small class="ml-10"><a href="#">Change</a></small></h4>
+                                                    </div>
+                                                    <div class="row border-b">
+                                                        <ul class="no-ul">
+                                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Country</strong></span></div><div class="col-xs-8 first">United Kingdom</div></li>
+                                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Course Subject</strong></span></div><div class="col-xs-8 first">Judas</div></li>
+                                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Intake Year</strong></span></div><div class="col-xs-8 first">2013</div></li>
+                                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Intake Month</strong></span></div><div class="col-xs-8 first">May</div></li>
+                                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Reference Number</strong></span></div><div class="col-xs-8 first">1234512345</div></li>
+                                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Type</strong></span></div><div class="col-xs-8 first">Unknown</div></li>
+                                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Institution</strong></span></div><div class="col-xs-8 first">INTO Manchester</div></li>
+                                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>City</strong></span></div><div class="col-xs-8 first">London</div></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="row">
+                                                        <ul class="no-ul">
+                                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Created</strong></span></div><div class="col-xs-8 first"><a href="#" class="mr-10">Senthil</a>2-2-2014 15:08 p.m.</div></li>
+                                                            <li><div class="col-xs-4 text-right first"><span class="light"><strong>Last Updated</strong></span></div><div class="col-xs-8 first"><a href="#" class="mr-10">Senthil</a>2-2-2014 15:08 p.m.</div></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-4 row-right pr-0">
+                                                    <div class="well well-sm filter-well">
+                                                        <h4>Status Log</h4>
+                                                        <p class="indent"><strong>Sent</strong></p>
+                                                        <div class="ml-10">
+                                                            <p class="indent"><small>At: 2-2-2014 15:08 p.m.</small></p>
+                                                            <p><small>By: <a href="#">Senthil Kumar</a></small></p>
+                                                        </div>
+                                                        <p class="indent"><strong>Conditional Offer</strong></p>
+                                                        <div class="ml-10">
+                                                            <p class="indent"><small>At: 2-2-2014 15:08 p.m.</small></p>
+                                                            <p><small>By: <a href="#">Senthil Kumar</a></small></p>
+                                                        </div>
+                                                        <p class="indent"><strong>Some Status</strong></p>
+                                                        <div class="ml-10">
+                                                            <p class="indent"><small>At: 2-2-2014 15:08 p.m.</small></p>
+                                                            <p><small>By: <a href="#">Senthil Kumar</a></small></p>
+                                                        </div>
+                                                        <a href="#"><strong>More...</strong></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row row-top">
+                                                <div class="row">
+                                                    <h4><strong>Notes</strong><small class="ml-10"><a href="#">Add note</a></small></h4>
+                                                </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                                <div class="row row-right">
+                                    <h4><strong>Country 2</strong></h4>
+                                    <div class="panel-group" id="accordion">
+                                      <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                          <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+                                              University name 2 [Status]
+                                            </a>
+                                          </h4>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse">
+                                          <div class="panel-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="panel-group" id="accordion">
+                                      <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                          <h4 class="panel-title">
+                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+                                              University name 3 [Status]
+                                            </a>
+                                          </h4>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse">
+                                          <div class="panel-body">
+                                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <script>
+                    actmm('registrations');
+                    </script>
+
+                </div>
+            </div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-right"><small><em>Organizor © 2013</em></small></p>
+      </div>
+    </div>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
+

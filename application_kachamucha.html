@@ -1,0 +1,562 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/images/icons/reportm.png">
+
+    <title>Organizor</title>
+    <link href="/assets/bootstrap.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/dt-bootstrap.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/multi-select.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/fullcalendar.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/token-input-bootstrappy.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/jquery-ui-datepicker.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/slider.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/custom.css?body=1" media="all" rel="stylesheet" type="text/css" />
+<link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
+    <script src="/assets/jquery.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery_ujs.js?body=1" type="text/javascript"></script>
+<script src="/assets/alert.js?body=1" type="text/javascript"></script>
+<script src="/assets/allow_ips.js?body=1" type="text/javascript"></script>
+<script src="/assets/application_statuses.js?body=1" type="text/javascript"></script>
+<script src="/assets/bootbox.js?body=1" type="text/javascript"></script>
+<script src="/assets/bootstrap-slider.js?body=1" type="text/javascript"></script>
+<script src="/assets/bootstrap.js?body=1" type="text/javascript"></script>
+<script src="/assets/branches.js?body=1" type="text/javascript"></script>
+<script src="/assets/commission_statuses.js?body=1" type="text/javascript"></script>
+<script src="/assets/commissions.js?body=1" type="text/javascript"></script>
+<script src="/assets/common.js?body=1" type="text/javascript"></script>
+<script src="/assets/config.js?body=1" type="text/javascript"></script>
+<script src="/assets/contract_doc_categories.js?body=1" type="text/javascript"></script>
+<script src="/assets/contracts.js?body=1" type="text/javascript"></script>
+<script src="/assets/course_levels.js?body=1" type="text/javascript"></script>
+<script src="/assets/doc_categories.js?body=1" type="text/javascript"></script>
+<script src="/assets/emails.js?body=1" type="text/javascript"></script>
+<script src="/assets/enquiry_statuses.js?body=1" type="text/javascript"></script>
+<script src="/assets/event_types.js?body=1" type="text/javascript"></script>
+<script src="/assets/fees.js?body=1" type="text/javascript"></script>
+<script src="/assets/follow_ups.js?body=1" type="text/javascript"></script>
+<script src="/assets/handle.js?body=1" type="text/javascript"></script>
+<script src="/assets/import.js?body=1" type="text/javascript"></script>
+<script src="/assets/institution_types.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery-ui-1.10.0.custom.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery-ui-timepicker-addon.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery.cookie.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery.cycle.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery.dataTables.min.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery.easing.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery.multi-select.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery.quicksearch.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery.tokeninput.js?body=1" type="text/javascript"></script>
+<script src="/assets/json.js?body=1" type="text/javascript"></script>
+<script src="/assets/mytooltip.js?body=1" type="text/javascript"></script>
+<script src="/assets/people.js?body=1" type="text/javascript"></script>
+<script src="/assets/person_types.js?body=1" type="text/javascript"></script>
+<script src="/assets/popup.js?body=1" type="text/javascript"></script>
+<script src="/assets/reg_courses.js?body=1" type="text/javascript"></script>
+<script src="/assets/registrations.js?body=1" type="text/javascript"></script>
+<script src="/assets/resources.js?body=1" type="text/javascript"></script>
+<script src="/assets/scrollbar-min.js?body=1" type="text/javascript"></script>
+<script src="/assets/scrollbar-plus.js?body=1" type="text/javascript"></script>
+<script src="/assets/status_diagram.js?body=1" type="text/javascript"></script>
+<script src="/assets/todo_statuses.js?body=1" type="text/javascript"></script>
+<script src="/assets/todo_topics.js?body=1" type="text/javascript"></script>
+<script src="/assets/todos.js?body=1" type="text/javascript"></script>
+<script src="/assets/tooltip.js?body=1" type="text/javascript"></script>
+<script src="/assets/user_configs.js?body=1" type="text/javascript"></script>
+<script src="/assets/users.js?body=1" type="text/javascript"></script>
+<script src="/assets/validation.js?body=1" type="text/javascript"></script>
+<script src="/assets/white_list.js?body=1" type="text/javascript"></script>
+<script src="/assets/z-dt-bootstrap.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery_nested_form.js?body=1" type="text/javascript"></script>
+<script src="/assets/tinymce/preinit.js?body=1" type="text/javascript"></script>
+<script src="/assets/tinymce/tinymce.js?body=1" type="text/javascript"></script>
+<script src="/assets/tinymce.js?body=1" type="text/javascript"></script>
+<script src="/assets/tinymce/tinymce.jquery.js?body=1" type="text/javascript"></script>
+<script src="/assets/tinymce/jquery.tinymce.js?body=1" type="text/javascript"></script>
+<script src="/assets/tinymce-jquery.js?body=1" type="text/javascript"></script>
+<script src="/assets/jquery.purr.js?body=1" type="text/javascript"></script>
+<script src="/assets/best_in_place.js?body=1" type="text/javascript"></script>
+<script src="/assets/private_pub.js?body=1" type="text/javascript"></script>
+<script src="/assets/fullcalendar.js?body=1" type="text/javascript"></script>
+<script src="/assets/data-confirm-modal.js?body=1" type="text/javascript"></script>
+<script src="/assets/application.js?body=1" type="text/javascript"></script>
+    <meta content="authenticity_token" name="csrf-param" />
+<meta content="b56sy6ZE0uZaYw8Ei1B+9sNkW1vGSHmHh19P0MWzRL0=" name="csrf-token" />
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  <!-- Shortening variable -->
+    <div id="header">
+      <div class="container">
+          <div class="col-xs-9">
+            <h1 class="text-left">Organizor</h1>
+          </div>
+          <div class="col-xs-3 profile">
+            <div class="col-xs-3">
+              <img alt="User" class="img-rounded" height="50" src="/images/icons/user.png" width="50" />
+            </div>
+            <div class="col-xs-9">
+              <small>Senthil</small>
+
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Begin page content -->
+    <div class="container main">
+
+      <div class="row">
+        <div class="col-xs-2 left-nav">
+          <ul class="nav nav-pills nav-stacked main-menu">
+
+            <li class="disabled">
+              <a href="#"><span class="glyphicon glyphicon-th"></span>Dashboard</a>
+            </li>
+
+            <li class="disabled">
+              <a href="#"><span class="glyphicon glyphicon-stats"></span>Reports</a>
+            </li>
+
+            <hr>
+
+            <li id="enquiries">
+              <a href="/enquiries"><span class="glyphicon glyphicon-earphone"></span>Enquiries</a>
+            </li>
+            <li id="registrations">
+              <a href="/registrations"><span class="glyphicon glyphicon-pencil"></span>Registrations</a>
+            </li>
+
+            <li id="institutions">
+              <a href="/institutions"><span class="glyphicon glyphicon-home"></span>Institutions</a>
+            </li>
+
+            <li id="people">
+              <a href="/people"><span class="glyphicon glyphicon-folder-open"></span>People</a>
+            </li>
+
+            <hr>
+
+            <!-- not displaying accounts and contracts -->
+
+            <li id="emails">
+                <a href="/emails"><span class="glyphicon glyphicon-envelope"></span>Emails</a>
+            </li>
+
+            <li id="follow_ups">
+              <a href="/follow_ups"><span class="glyphicon glyphicon-calendar"></span>Calendar</a>
+            </li>
+
+            <li id="todos">
+              <a href="/todos"><span class="glyphicon glyphicon-check"></span>Todos</a>
+            </li>
+
+            <hr>
+
+            <li id="settings"><a href="/user_configs"><span class="glyphicon glyphicon-wrench"></span>Settings</a></li>
+            <li id="users">
+                  <a href="/users"><span class="glyphicon glyphicon-user"></span>Users</a>
+            </li>
+            <li id="configuration" class="active">
+                <a href="/configuration"><span class="glyphicon glyphicon-list"></span>Configuration</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-10 main-content">
+          <!-- Enquiry show page -->
+<div class="row row-top">
+<div class="col-md-10">
+  <h3>Ram Kumar Muthamizhan</h3>
+</div>
+
+<div class="col-md-2">
+                <div class="form-group">
+                     <a href="/registrations/4/edit" class="btn btn-primary">Edit</a> 
+                     <a href="/registrations/4/clone" class="btn btn-primary">Clone</a>
+                </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12">
+      <ul class="nav nav-pills seperator">
+        <li id="basic" class="active">
+          <a href="/registrations/4">Basic</a>
+        </li>
+        <!-- actions the tabs -->
+                      
+        
+        <li class="dropdown actions">
+            <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">
+                Actions
+                    <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+               <li id='email'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;email&#x27;,
+                                               &#x27;4&#x27;);" tabindex="-1">Email</a></li><li id='follow_up'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;follow_up&#x27;,
+                                               &#x27;4&#x27;);" tabindex="-1">Follow Up</a></li><li id='note'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;note&#x27;,
+                                               &#x27;4&#x27;);" tabindex="-1">Note</a></li><li id='todo'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;todo&#x27;,
+                                               &#x27;4&#x27;);" tabindex="-1">Todo</a></li><li id='assign_to'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;assign_to&#x27;,
+                                               &#x27;4&#x27;);" tabindex="-1">Assign To</a></li>
+            </ul>
+        </li>
+        
+        <li id='application'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;application&#x27;,
+                                               &#x27;4&#x27;);">Application</a></li><li id='document'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;document&#x27;,
+                                               &#x27;4&#x27;);">Document</a></li><li id='finance'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;finance&#x27;,
+                                               &#x27;4&#x27;);">Finance</a></li><li id='timeline'><a href="#" data-toggle="tab" onclick="action_partial(&#x27;registrations&#x27;,
+                                               &#x27;timeline&#x27;,
+                                               &#x27;4&#x27;);">Timeline</a></li>
+        
+        
+<br/>
+<br/>
+
+
+      </ul>
+      <!-- some html5 data to be sent to the back end -->
+      <div id="registration_id_div" data-registration_id='4' data-model_sing='registration' data-model_plu='registrations' ></div>
+
+      <div id="edit-resource-container"></div>
+      <div id="action_div">
+        <!-- basic information about the registration -->
+
+
+        <div class="boxp">
+            <div class="htab">
+            <h5>
+                <b>Application Status(es) : 
+                    <span class="sp">
+                        <h6>
+                            <b>Joined, Joined, Joined </b>
+                        </h6>
+                    </span>
+                </b>
+            </h5>
+            
+         
+            
+            <div class="cl"></div>
+        </div>
+        <br/>
+        <div class="cols" style="padding-bottom:20px">
+            <div class="col8">
+                <div id="scrollboxu">
+                    <div class="rel abs-plus-box">
+                      <img alt="1380337_583100605073204_1669672471_a" class="imgb fl" src="/uploads/human_images/registration/image/4/1380337_583100605073204_1669672471_a.jpg" title="Upload your photo" width="100" />
+                      <span onclick = "showPopUp('upload_image');" class="abs-plus">+</span>
+                    </div>
+                     <div id="upload_image" class="addNewPop" style="display: none; top: 483px; left: 455px;"> 
+                       <form accept-charset="UTF-8" action="/registrations/4" class="edit_registration" enctype="multipart/form-data" id="edit_registration_4" method="post"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="_method" type="hidden" value="put" /><input name="authenticity_token" type="hidden" value="b56sy6ZE0uZaYw8Ei1B+9sNkW1vGSHmHh19P0MWzRL0=" /></div>
+                    <div class="fbox">
+                      <label for="registration_local_image">Local image</label>
+                      <input id="registration_image" name="registration[image]" type="file" />   
+                    </div>
+                    <div align="center">
+                    <div style="font-size:11px">
+      <b>              -- OR --</b>
+</div>
+                    </div>
+                    <div class="fbox">
+                      <label for="registration_remote_image_url">Remote image url</label>
+                      <input id="registration_remote_image_url" name="registration[remote_image_url]" size="30" type="text" />   
+                    </div>
+                    <input type="button" value="Close" name="commit" class="btns fr bClose"/>
+                    <input class="btnp fr" name="commit" type="submit" value="Upload" />
+                    <div class="cl"></div>
+</form>
+                     </div>
+                    <div class="fl padl20">
+                        <h5>
+                        <b>                        
+                            Ram Kumar Muthamizhan
+                        </b>
+                        <span class='ref_no'>
+                          [13100000]
+                        </span>
+                        </h5>
+                        <ul class="vlsdet">
+                        <li><label>Mobile 1 </label>: <span class='best_in_place' id='best_in_place_registration_4_mobile1' data-url='/registrations/4' data-object='registration' data-attribute='mobile1' data-type='input'>98439874234</span></li>
+                        <li><label>Mobile 2 </label>: <span class='best_in_place' id='best_in_place_registration_4_mobile2' data-url='/registrations/4' data-object='registration' data-attribute='mobile2' data-type='input'>04442184085</span></li>
+                        <li><label>Email 1</label>: <span class='best_in_place' id='best_in_place_registration_4_email1' data-url='/registrations/4' data-object='registration' data-attribute='email1' data-type='input'>fdsgfd@asdf.com</span></li>
+                        <li><label>Email 2</label>: <span class='best_in_place' id='best_in_place_registration_4_email2' data-url='/registrations/4' data-object='registration' data-attribute='email2' data-type='input'>sfadf</span></li>
+                        </ul>
+                    </div>
+                    <div class="cl"></div>
+                    <br/>
+                    <h4 class="htab">Personal information</h4>
+                    <ul class="vlsdet">
+                    <li><label>Date of Birth</label>: <span class='best_in_place' id='best_in_place_registration_4_date_of_birth' data-url='/registrations/4' data-object='registration' data-attribute='date_of_birth' data-type='date'>05-08-2013</span></li>
+                    <li><label>Gender</label>: <span class='best_in_place' id='best_in_place_registration_4_gender' data-url='/registrations/4' data-object='registration' data-collection='[["m","male"],["f","female"]]' data-attribute='gender' data-type='select' data-value='m'>male</span></li>
+                    <li><label>Nationality</label>: <span class='best_in_place' id='best_in_place_registration_4_country_id' data-url='/registrations/4' data-object='registration' data-collection='[[2,"Afghanistan"],[5,"Albania"],[62,"Algeria"],[11,"American Samoa"],[6,"Andorra"],[3,"Angola"],[4,"Anguilla"],[12,"Antarctica"],[14,"Antigua and Barbuda"],[9,"Argentina"],[10,"Armenia"],[1,"Aruba"],[15,"Australia"],[16,"Austria"],[17,"Azerbaijan"],[25,"Bahamas"],[24,"Bahrain"],[22,"Bangladesh"],[32,"Barbados"],[27,"Belarus"],[19,"Belgium"],[28,"Belize"],[20,"Benin"],[29,"Bermuda"],[34,"Bhutan"],[30,"Bolivia"],[26,"Bosnia and Herzegovina"],[36,"Botswana"],[35,"Bouvet Island"],[31,"Brazil"],[101,"British Indian Ocean Territory"],[33,"Brunei"],[23,"Bulgaria"],[21,"Burkina Faso"],[18,"Burundi"],[114,"Cambodia"],[44,"Cameroon"],[38,"Canada"],[50,"Cape Verde"],[54,"Cayman Islands"],[37,"Central African Republic"],[206,"Chad"],[41,"Chile"],[42,"China"],[53,"Christmas Island"],[39,"Cocos (Keeling) Islands"],[48,"Colombia"],[49,"Comoros"],[46,"Congo"],[45,"Congo, The Democratic Republic of the"],[47,"Cook Islands"],[51,"Costa Rica"],[43,"Côte d’Ivoire"],[96,"Croatia"],[52,"Cuba"],[55,"Cyprus"],[56,"Czech Republic"],[60,"Denmark"],[58,"Djibouti"],[59,"Dominica"],[61,"Dominican Republic"],[212,"East Timor"],[63,"Ecuador"],[64,"Egypt"],[193,"El Salvador"],[85,"Equatorial Guinea"],[65,"Eritrea"],[68,"Estonia"],[69,"Ethiopia"],[72,"Falkland Islands"],[74,"Faroe Islands"],[71,"Fiji Islands"],[70,"Finland"],[73,"France"],[90,"French Guiana"],[178,"French Polynesia"],[13,"French Southern territories"],[76,"Gabon"],[83,"Gambia"],[78,"Georgia"],[57,"Germany"],[79,"Ghana"],[80,"Gibraltar"],[86,"Greece"],[88,"Greenland"],[87,"Grenada"],[82,"Guadeloupe"],[91,"Guam"],[89,"Guatemala"],[81,"Guinea"],[84,"Guinea-Bissau"],[92,"Guyana"],[97,"Haiti"],[94,"Heard Island and McDonald Islands"],[226,"Holy See (Vatican City State)"],[95,"Honduras"],[93,"Hong Kong"],[98,"Hungary"],[105,"Iceland"],[100,"India"],[99,"Indonesia"],[103,"Iran"],[104,"Iraq"],[102,"Ireland"],[106,"Israel"],[107,"Italy"],[108,"Jamaica"],[110,"Japan"],[109,"Jordan"],[111,"Kazakstan"],[112,"Kenya"],[115,"Kiribati"],[118,"Kuwait"],[113,"Kyrgyzstan"],[119,"Laos"],[129,"Latvia"],[120,"Lebanon"],[126,"Lesotho"],[121,"Liberia"],[122,"Libyan Arab Jamahiriya"],[124,"Liechtenstein"],[127,"Lithuania"],[128,"Luxembourg"],[130,"Macao"],[138,"Macedonia"],[134,"Madagascar"],[149,"Malawi"],[150,"Malaysia"],[135,"Maldives"],[139,"Mali"],[140,"Malta"],[137,"Marshall Islands"],[147,"Martinique"],[145,"Mauritania"],[148,"Mauritius"],[151,"Mayotte"],[136,"Mexico"],[75,"Micronesia, Federated States of"],[133,"Moldova"],[132,"Monaco"],[142,"Mongolia"],[146,"Montserrat"],[131,"Morocco"],[144,"Mozambique"],[141,"Myanmar"],[152,"Namibia"],[162,"Nauru"],[161,"Nepal"],[159,"Netherlands"],[7,"Netherlands Antilles"],[153,"New Caledonia"],[163,"New Zealand"],[157,"Nicaragua"],[154,"Niger"],[156,"Nigeria"],[158,"Niue"],[155,"Norfolk Island"],[174,"North Korea"],[143,"Northern Mariana Islands"],[160,"Norway"],[164,"Oman"],[165,"Pakistan"],[170,"Palau"],[177,"Palestine"],[166,"Panama"],[171,"Papua New Guinea"],[176,"Paraguay"],[168,"Peru"],[169,"Philippines"],[167,"Pitcairn"],[172,"Poland"],[175,"Portugal"],[173,"Puerto Rico"],[179,"Qatar"],[180,"Réunion"],[181,"Romania"],[182,"Russian Federation"],[183,"Rwanda"],[189,"Saint Helena"],[116,"Saint Kitts and Nevis"],[123,"Saint Lucia"],[196,"Saint Pierre and Miquelon"],[227,"Saint Vincent and the Grenadines"],[234,"Samoa"],[194,"San Marino"],[197,"Sao Tome and Principe"],[184,"Saudi Arabia"],[186,"Senegal"],[203,"Seychelles"],[192,"Sierra Leone"],[187,"Singapore"],[199,"Slovakia"],[200,"Slovenia"],[191,"Solomon Islands"],[195,"Somalia"],[237,"South Africa"],[188,"South Georgia and the South Sandwich Islands"],[117,"South Korea"],[67,"Spain"],[125,"Sri Lanka"],[185,"Sudan"],[198,"Suriname"],[190,"Svalbard and Jan Mayen"],[202,"Swaziland"],[201,"Sweden"],[40,"Switzerland"],[204,"Syria"],[218,"Taiwan"],[209,"Tajikistan"],[219,"Tanzania"],[208,"Thailand"],[207,"Togo"],[210,"Tokelau"],[213,"Tonga"],[214,"Trinidad and Tobago"],[215,"Tunisia"],[216,"Turkey"],[211,"Turkmenistan"],[205,"Turks and Caicos Islands"],[217,"Tuvalu"],[220,"Uganda"],[221,"Ukraine"],[8,"United Arab Emirates"],[77,"United Kingdom"],[224,"United States"],[222,"United States Minor Outlying Islands"],[223,"Uruguay"],[225,"Uzbekistan"],[232,"Vanuatu"],[228,"Venezuela"],[231,"Vietnam"],[229,"Virgin Islands, British"],[230,"Virgin Islands, U.S."],[233,"Wallis and Futuna"],[66,"Western Sahara"],[235,"Yemen"],[236,"Yugoslavia"],[238,"Zambia"],[239,"Zimbabwe"]]' data-attribute='country_id' data-type='select' data-original-content='228' data-value='228'>Venezuela</span></li>
+                                                                      
+                    <li><label>Home Phone</label>: <span class='best_in_place' id='best_in_place_registration_4_home_phone' data-url='/registrations/4' data-object='registration' data-attribute='home_phone' data-type='input'>0444324543</span></li>
+                    <li><label>Work Phone</label>: <span class='best_in_place' id='best_in_place_registration_4_work_phone' data-url='/registrations/4' data-object='registration' data-attribute='work_phone' data-type='input'>0443425435</span></li>
+                    </ul>
+                    <br/>
+                    <h4 class="htab">Home Address</h4>
+                    <ul class="vlsdet">
+                                                                      
+                    <li><label>Line 1</label>: <span class='best_in_place' id='best_in_place_registration_4_address_line1' data-url='/registrations/4' data-object='registration' data-attribute='address_line1' data-type='textarea'>f4,  mahalakshmi apts</span></li>
+                    <li><label>Line 2</label>: <span class='best_in_place' id='best_in_place_registration_4_address_line2' data-url='/registrations/4' data-object='registration' data-attribute='address_line2' data-type='textarea'>vijayaganagar 8th main road</span></li>
+                    <li><label>City</label>: <span class='best_in_place' id='best_in_place_registration_4_address_city' data-url='/registrations/4' data-object='registration' data-attribute='address_city' data-type='input'>chennai</span></li>
+                    <li><label>Country</label>: <span class='best_in_place' id='best_in_place_registration_4_country_id' data-url='/registrations/4' data-object='registration' data-collection='[[2,"Afghanistan"],[5,"Albania"],[62,"Algeria"],[11,"American Samoa"],[6,"Andorra"],[3,"Angola"],[4,"Anguilla"],[12,"Antarctica"],[14,"Antigua and Barbuda"],[9,"Argentina"],[10,"Armenia"],[1,"Aruba"],[15,"Australia"],[16,"Austria"],[17,"Azerbaijan"],[25,"Bahamas"],[24,"Bahrain"],[22,"Bangladesh"],[32,"Barbados"],[27,"Belarus"],[19,"Belgium"],[28,"Belize"],[20,"Benin"],[29,"Bermuda"],[34,"Bhutan"],[30,"Bolivia"],[26,"Bosnia and Herzegovina"],[36,"Botswana"],[35,"Bouvet Island"],[31,"Brazil"],[101,"British Indian Ocean Territory"],[33,"Brunei"],[23,"Bulgaria"],[21,"Burkina Faso"],[18,"Burundi"],[114,"Cambodia"],[44,"Cameroon"],[38,"Canada"],[50,"Cape Verde"],[54,"Cayman Islands"],[37,"Central African Republic"],[206,"Chad"],[41,"Chile"],[42,"China"],[53,"Christmas Island"],[39,"Cocos (Keeling) Islands"],[48,"Colombia"],[49,"Comoros"],[46,"Congo"],[45,"Congo, The Democratic Republic of the"],[47,"Cook Islands"],[51,"Costa Rica"],[43,"Côte d’Ivoire"],[96,"Croatia"],[52,"Cuba"],[55,"Cyprus"],[56,"Czech Republic"],[60,"Denmark"],[58,"Djibouti"],[59,"Dominica"],[61,"Dominican Republic"],[212,"East Timor"],[63,"Ecuador"],[64,"Egypt"],[193,"El Salvador"],[85,"Equatorial Guinea"],[65,"Eritrea"],[68,"Estonia"],[69,"Ethiopia"],[72,"Falkland Islands"],[74,"Faroe Islands"],[71,"Fiji Islands"],[70,"Finland"],[73,"France"],[90,"French Guiana"],[178,"French Polynesia"],[13,"French Southern territories"],[76,"Gabon"],[83,"Gambia"],[78,"Georgia"],[57,"Germany"],[79,"Ghana"],[80,"Gibraltar"],[86,"Greece"],[88,"Greenland"],[87,"Grenada"],[82,"Guadeloupe"],[91,"Guam"],[89,"Guatemala"],[81,"Guinea"],[84,"Guinea-Bissau"],[92,"Guyana"],[97,"Haiti"],[94,"Heard Island and McDonald Islands"],[226,"Holy See (Vatican City State)"],[95,"Honduras"],[93,"Hong Kong"],[98,"Hungary"],[105,"Iceland"],[100,"India"],[99,"Indonesia"],[103,"Iran"],[104,"Iraq"],[102,"Ireland"],[106,"Israel"],[107,"Italy"],[108,"Jamaica"],[110,"Japan"],[109,"Jordan"],[111,"Kazakstan"],[112,"Kenya"],[115,"Kiribati"],[118,"Kuwait"],[113,"Kyrgyzstan"],[119,"Laos"],[129,"Latvia"],[120,"Lebanon"],[126,"Lesotho"],[121,"Liberia"],[122,"Libyan Arab Jamahiriya"],[124,"Liechtenstein"],[127,"Lithuania"],[128,"Luxembourg"],[130,"Macao"],[138,"Macedonia"],[134,"Madagascar"],[149,"Malawi"],[150,"Malaysia"],[135,"Maldives"],[139,"Mali"],[140,"Malta"],[137,"Marshall Islands"],[147,"Martinique"],[145,"Mauritania"],[148,"Mauritius"],[151,"Mayotte"],[136,"Mexico"],[75,"Micronesia, Federated States of"],[133,"Moldova"],[132,"Monaco"],[142,"Mongolia"],[146,"Montserrat"],[131,"Morocco"],[144,"Mozambique"],[141,"Myanmar"],[152,"Namibia"],[162,"Nauru"],[161,"Nepal"],[159,"Netherlands"],[7,"Netherlands Antilles"],[153,"New Caledonia"],[163,"New Zealand"],[157,"Nicaragua"],[154,"Niger"],[156,"Nigeria"],[158,"Niue"],[155,"Norfolk Island"],[174,"North Korea"],[143,"Northern Mariana Islands"],[160,"Norway"],[164,"Oman"],[165,"Pakistan"],[170,"Palau"],[177,"Palestine"],[166,"Panama"],[171,"Papua New Guinea"],[176,"Paraguay"],[168,"Peru"],[169,"Philippines"],[167,"Pitcairn"],[172,"Poland"],[175,"Portugal"],[173,"Puerto Rico"],[179,"Qatar"],[180,"Réunion"],[181,"Romania"],[182,"Russian Federation"],[183,"Rwanda"],[189,"Saint Helena"],[116,"Saint Kitts and Nevis"],[123,"Saint Lucia"],[196,"Saint Pierre and Miquelon"],[227,"Saint Vincent and the Grenadines"],[234,"Samoa"],[194,"San Marino"],[197,"Sao Tome and Principe"],[184,"Saudi Arabia"],[186,"Senegal"],[203,"Seychelles"],[192,"Sierra Leone"],[187,"Singapore"],[199,"Slovakia"],[200,"Slovenia"],[191,"Solomon Islands"],[195,"Somalia"],[237,"South Africa"],[188,"South Georgia and the South Sandwich Islands"],[117,"South Korea"],[67,"Spain"],[125,"Sri Lanka"],[185,"Sudan"],[198,"Suriname"],[190,"Svalbard and Jan Mayen"],[202,"Swaziland"],[201,"Sweden"],[40,"Switzerland"],[204,"Syria"],[218,"Taiwan"],[209,"Tajikistan"],[219,"Tanzania"],[208,"Thailand"],[207,"Togo"],[210,"Tokelau"],[213,"Tonga"],[214,"Trinidad and Tobago"],[215,"Tunisia"],[216,"Turkey"],[211,"Turkmenistan"],[205,"Turks and Caicos Islands"],[217,"Tuvalu"],[220,"Uganda"],[221,"Ukraine"],[8,"United Arab Emirates"],[77,"United Kingdom"],[224,"United States"],[222,"United States Minor Outlying Islands"],[223,"Uruguay"],[225,"Uzbekistan"],[232,"Vanuatu"],[228,"Venezuela"],[231,"Vietnam"],[229,"Virgin Islands, British"],[230,"Virgin Islands, U.S."],[233,"Wallis and Futuna"],[66,"Western Sahara"],[235,"Yemen"],[236,"Yugoslavia"],[238,"Zambia"],[239,"Zimbabwe"]]' data-attribute='country_id' data-type='select' data-original-content='228' data-value='228'>Venezuela</span></li>
+                    <li><label>Post Code</label>: <span class='best_in_place' id='best_in_place_registration_4_address_post_code' data-url='/registrations/4' data-object='registration' data-attribute='address_post_code' data-type='input'>600042</span></li>
+                                                                  
+                   
+                    </ul>
+                    <br/>
+                    <h4 class="htab">Passport & Visa</h4>
+                    <ul class="vlsdet">
+                    <li><label>Passport Number</label>: <span class='best_in_place' id='best_in_place_registration_4_passport_number' data-url='/registrations/4' data-object='registration' data-attribute='passport_number' data-type='input'>349857345</span></li>
+                    <li><label>Passport Valid Till</label>: <span class='best_in_place' id='best_in_place_registration_4_passport_valid_till' data-url='/registrations/4' data-object='registration' data-attribute='passport_valid_till' data-type='date'>24-10-2013</span></li>
+                    <li><label>Visa Type</label>: <span class='best_in_place' id='best_in_place_registration_4_visa_type' data-url='/registrations/4' data-object='registration' data-attribute='visa_type' data-type='input'>United</span></li>
+                    <li><label>Visa Valid Till</label>:  <span class='best_in_place' id='best_in_place_registration_4_visa_valid_till' data-url='/registrations/4' data-object='registration' data-attribute='visa_valid_till' data-type='date'>30-10-2013</span></li>
+                    </ul><br/>
+                 </div>
+            </div>
+            <div class="col4 ">
+                <div class="boxs">
+                    <ul class="infodhls">
+                        <li>Registration history</li>
+                        <li>
+                        <b>Registered on :</b> 
+                          06-10-2013
+                        </li>
+                        <li>
+                        <b>Registration Source :</b> 
+                          Unknown
+                        </li>
+                        <li>
+                        <b>Created by :</b> 
+                            
+                        </li>
+                        <li>
+                        <b>Created at :</b> 
+                          06-10-2013 13:37 PM
+                        </li>
+                        <li>
+                        <br>
+                        <b>Last modified</b></li>
+                        <li><b>By :</b> 
+                            Senthil
+                        </li>
+                        <li><b>At :</b> 
+                            02-02-2014 16:11 PM
+                        </li>
+                        <li><br><b>Currently Assigned</b></li>
+                        <li><b>To :</b>
+                            Senthil
+                        </li>
+                        <li><b>By :</b> 
+                            Senthil
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </div>
+<br/><h4 class="htab">
+Education Background
+</h4>
+<ul class="vlsdet">
+    <li>
+      <label>Qualification </label>: 
+        <span class='best_in_place' id='best_in_place_registration_4_qua_id' data-url='/registrations/4' data-object='registration' data-collection='[[8,"areYaar"],[2,"BE"],[5,"BSC"],[7,"faizal"],[3,"ME"],[4,"ME"],[6,"MPHIL"]]' data-attribute='qua_id' data-type='select' data-original-content='5' data-value='5'>BSC</span>
+    </li>
+    
+    <li>
+      <label>Subject </label>: 
+      
+        <span class='best_in_place' id='best_in_place_registration_4_qua_subject' data-url='/registrations/4' data-object='registration' data-attribute='qua_subject' data-type='input'>sdaf</span>
+      
+    </li>
+    
+    <li>
+      <label>Institution </label>: 
+      
+        <span class='best_in_place' id='best_in_place_registration_4_qua_institution' data-url='/registrations/4' data-object='registration' data-attribute='qua_institution' data-type='input'>sadf</span>
+      
+    </li>
+    
+    <li>
+      <label>Grade </label>: 
+      
+        <span class='best_in_place' id='best_in_place_registration_4_qua_grade' data-url='/registrations/4' data-object='registration' data-attribute='qua_grade' data-type='input'>gfdg</span>
+      
+    </li>
+    
+    <li><label>
+      Exam </label>: 
+      
+        <span class='best_in_place' id='best_in_place_registration_4_qua_exam' data-url='/registrations/4' data-object='registration' data-attribute='qua_exam' data-type='input'>sadf</span>
+      
+    </li>
+    
+    <li><label>
+      Score </label>: 
+      
+        <span class='best_in_place' id='best_in_place_registration_4_qua_score' data-url='/registrations/4' data-object='registration' data-attribute='qua_score' data-type='input'>sadf</span>
+      
+    </li>
+</ul>
+<br/>
+<div class="brg0"> </div>
+    <br/>
+    <br/>
+<h4 class="htab">
+English Language Proficiency
+</h4>
+
+
+<ul class="vlsdet">
+    <li><label>
+      Level of English </label>: 
+      
+        <span class='best_in_place' id='best_in_place_registration_4_prof_eng_level_id' data-url='/registrations/4' data-object='registration' data-collection='[[5,"Intermediate"],[2,"jgfg"],[4,"Orange"],[1,"Second level"],[3,"Tomato"]]' data-attribute='prof_eng_level_id' data-type='select' data-original-content='3' data-value='3'>Tomato</span>
+      
+    </li>
+    
+            <li><label>
+              Exam Type </label>: 
+              
+                TOEFL
+              
+            </li>
+            
+            <li><label>
+              Exam Score </label>: 
+              
+                231
+              
+            </li>
+       
+            <li><label>
+              Exam Type </label>: 
+              
+                11-10-2013
+              
+            </li>
+</ul>
+
+<br/>
+<div class="brg0"> </div>
+    <br/>
+    <br/>
+<h4 class="htab">
+Emergency Contact
+</h4>
+
+
+<ul class="vlsdet">
+
+    <li><label>
+      Full Name </label>: 
+      
+        <span class='best_in_place' id='best_in_place_registration_4_emer_full_name' data-url='/registrations/4' data-object='registration' data-attribute='emer_full_name' data-type='input'>senthil</span>
+      
+    </li>
+    <li><label>
+      Relationship </label>: 
+
+        <span class='best_in_place' id='best_in_place_registration_4_emer_relationship' data-url='/registrations/4' data-object='registration' data-collection='[["Father","Father"],["Mother","Mother"],["Husband","Husband"],["Wife","Wife"],["Brother","Brother"],["Sister","Sister"],["Cousin","Cousin"],["Uncle","Uncle"],["Friend","Friend"],["Other","Other"]]' data-attribute='emer_relationship' data-type='select' data-value='Brother'>Brother</span>
+      
+    </li>
+    <li><label>
+      Mobile Number </label>: 
+      
+        <span class='best_in_place' id='best_in_place_registration_4_emer_mobile' data-url='/registrations/4' data-object='registration' data-attribute='emer_mobile' data-type='input'>23453543</span>
+      
+    </li>
+    <li><label>
+      Email </label>: 
+      
+        <span class='best_in_place' id='best_in_place_registration_4_emer_email' data-url='/registrations/4' data-object='registration' data-attribute='emer_email' data-type='input'>sdfasdfg</span>
+      
+    </li>
+</ul>
+<br/>
+<div class="brg0"> </div>
+    <br/>
+    <br/>
+<h4 class="htab">
+Flight Details
+</h4>
+
+
+<ul class="vlsdet">
+    <li><label>
+      Flight Number </label>: 
+      
+        <span class='best_in_place' id='best_in_place_registration_4_flight_no' data-url='/registrations/4' data-object='registration' data-attribute='flight_no' data-type='input'>23143241</span>
+      
+    </li>
+    <li><label>
+      Arrival Date </label>: 
+      
+        <span class='best_in_place' id='best_in_place_registration_4_flight_arrival_date' data-url='/registrations/4' data-object='registration' data-attribute='flight_arrival_date' data-type='date'></span>
+      
+    </li>
+    <li><label>
+      Arrival Time </label>: 
+      
+        <span class='best_in_place' id='best_in_place_registration_4_flight_arrival_time' data-url='/registrations/4' data-object='registration' data-attribute='flight_arrival_time' data-type='input'></span>
+      
+    </li>
+    <li><label>
+      Airport </label>: 
+      
+        <span class='best_in_place' id='best_in_place_registration_4_flight_airport' data-url='/registrations/4' data-object='registration' data-attribute='flight_airport' data-type='input'>sadgadrg</span>
+      
+    </li>
+</ul>
+<br/>
+
+
+</div>
+
+      </div>
+  </div>
+</div>
+
+
+
+<script>
+
+ actmm('registrations'); 
+
+</script>
+
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-right"><small><em>Organizor © 2013</em></small></p>
+      </div>
+    </div>
+
+  </body>
+</html>
+
