@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Organizor</title>
+    <link href="css/bootstrap.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="css/custom.css" media="all" rel="stylesheet" type="text/css" />
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <div class="col-xs-12">
+          <div class="col-xs-4">
+            <h1>Organizor</h1>
+          </div>
+          <div class="col-xs-8">
+              <ul class="nav nav-pills pull-right header-links">
+                <li><a href="#">FEATURES</a></li>
+                <li><a href="#">RESOURCES</a></li>
+                <li><a href="#">VIDEOS</a></li>
+                <li><a href="#">HELP</a></li>
+                <li><a href="#">CONTACT</a></li>
+              </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="container">
+      <div class="login-container">
+        <div class="col-xs-12">
+          <div class="col-xs-8">
+            <div class="carousel slide" data-ride="carousel">
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner">
+                <div class="item active">
+                  <img src="images/screenshot.jpg" alt="screenshot" width="596">
+                </div>
+                <div class="item">
+                  <img src="images/screenshot2.jpg" alt="screenshot" width="596">
+                </div>
+                <div class="item">
+                  <img src="images/screenshot3.jpg" alt="screenshot" width="596">
+                </div>
+                <div class="item">
+                  <img src="images/screenshot4.jpg" alt="screenshot" width="596">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-4 no-p">
+            <div class="well login-well">
+              <h4>Login</h4>
+              <form>
+                <div class="form-group">
+                  <input type="email" class="form-control" placeholder="Email" required autofocus>
+                </div>
+                <div class="form-group">
+                  <input type="password" class="form-control" placeholder="Password" required>
+                </div>
+                <label class="checkbox">
+                  <input type="checkbox" value="remember-me"> Remember me
+                </label>
+                <p><a href="#"><small>Forgot password?</small></a></p>
+                <div class="form-group">
+                  <button class="btn btn-primary btn-block" type="submit">Sign in</button>
+                </div>
+              </form>
+            </div>
+            <p class="lead sidequote">“Simply the best CRM out<br> there, according to us.<br>And add other stuff.”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <p class="text-right"><small><em>Organizor © 2013</em></small></p>
+      </div>
+    </div>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('.carousel').carousel();
+      });
+    </script>
+  </body>
+</html>

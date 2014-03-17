@@ -43,6 +43,9 @@ body {
 .pb-15 {
   padding-bottom: 15px; }
 
+.pt-0 {
+  padding-top: 0 !important; }
+
 .pointer {
   cursor: pointer; }
 
@@ -52,6 +55,11 @@ body {
 
 .seperator {
   border-bottom: 1px solid #DDDDDD; }
+
+h1 {
+  font-family: "Yanone Kaffeesatz", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  margin: 1.3rem 0; }
 
 .popover {
   background-color: #FFFFFF;
@@ -77,10 +85,6 @@ body {
   height: 70px;
   background-color: #004156;
   color: #FFFFFF; }
-  #header h1 {
-    font-family: "Yanone Kaffeesatz", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    margin: 1.3rem 0; }
   #header .profile {
     padding-top: 1rem; }
   #header .notification-icon {
@@ -94,6 +98,14 @@ body {
     color: #000000; }
   #header .glyphicon-bell {
     margin-right: .5rem; }
+  #header .header-links a {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 25px 15px; }
+    #header .header-links a:hover, #header .header-links a:focus {
+      background-color: #ffe9b4;
+      color: #004156; }
 
 .container {
   width: 970px;
@@ -102,6 +114,25 @@ body {
   padding-left: 0;
   padding-right: 0;
   height: 100%; }
+
+.login-container {
+  padding-top: 60px; }
+  .login-container h1 {
+    color: #004156;
+    margin-bottom: 60px; }
+  .login-container h4 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px; }
+  .login-container .sidequote {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+    color: #004156; }
+  .login-container .no-p {
+    position: static; }
+  .login-container .login-well {
+    border: 1px solid #BBBBBB; }
 
 .main .left-nav {
   padding-top: 1rem;
@@ -142,9 +173,14 @@ body {
   .main .main-content .badge {
     color: #000000; }
   .main .main-content .filter-well {
-    background-color: #FFE9B4; }
+    background-color: #ffe9b4; }
   .main .main-content .border-b {
     border-bottom: 1px solid #dddddd; }
+  .main .main-content .bold-subhead {
+    font-size: 16px;
+    font-weight: bold; }
+  .main .main-content .note-box .note-content {
+    margin-left: -10px; }
   .main .main-content .to-do .well {
     margin-bottom: 10px; }
   .main .main-content .to-do .todo-head {

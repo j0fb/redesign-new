@@ -1,6 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700);
 
 $primary: #004156;
+$secondary: #FFE9B4;
 
 @mixin border($side) {
   border-#{$side}: 1px solid #dddddd;
@@ -55,6 +56,9 @@ body {
 .pb-15 {
   padding-bottom: 15px;
 }
+.pt-0 {
+  padding-top: 0 !important;
+}
 .pointer {
   cursor: pointer;
 }
@@ -64,6 +68,11 @@ body {
 }
 .seperator {
   border-bottom: 1px solid #DDDDDD;
+}
+h1 {
+  font-family: "Yanone Kaffeesatz", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  margin: 1.3rem 0;
 }
 
 .popover {
@@ -96,11 +105,6 @@ body {
   height: 70px;
   background-color: $primary;
   color: #FFFFFF;
-  h1 {
-    font-family: "Yanone Kaffeesatz", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    margin: 1.3rem 0;
-  }
   .profile {
     padding-top: 1rem;
   }
@@ -118,6 +122,16 @@ body {
   .glyphicon-bell {
     margin-right: .5rem;
   }
+  .header-links a {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 25px 15px;
+    &:hover, &:focus {
+      background-color: $secondary;
+      color: $primary;
+    }
+  }
 }
 
 .container {
@@ -127,6 +141,31 @@ body {
   padding-left: 0;
   padding-right: 0;
   height: 100%;
+}
+
+.login-container {
+  padding-top: 60px;
+  h1 {
+    color: $primary;
+    margin-bottom: 60px;
+  }
+  h4 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .sidequote {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
+    color: $primary;
+  }
+  .no-p {
+    position: static;
+  }
+  .login-well {
+    border: 1px solid #BBBBBB;
+  }
 }
 
 .main {
@@ -187,10 +226,19 @@ body {
       color: #000000;
     }
     .filter-well {
-      background-color: #FFE9B4;
+      background-color: $secondary;
     }
     .border-b {
       @include border(bottom);
+    }
+    .bold-subhead {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .note-box {
+      .note-content {
+        margin-left: -10px;
+      }
     }
     .to-do {
       .well {
